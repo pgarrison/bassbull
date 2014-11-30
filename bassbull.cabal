@@ -13,10 +13,10 @@ name:                bassbull
 version:             0.1.0.0
 
 -- A short (one-line) description of the package.
--- synopsis:            
+synopsis:            Processing some csv data
 
 -- A longer description of the package.
--- description:         
+description:         Baseball data analysis
 
 -- The license under which the package is released.
 license:             MIT
@@ -39,16 +39,21 @@ maintainer:          philipgarrison@cmu.edu
 build-type:          Simple
 
 -- Constraint on the version of Cabal needed to build this package.
-cabal-version:       >=1.8
+cabal-version:       >=1.10
 
 
 executable bassbull
+  ghc-options:         -Wall
+  hs-source-dirs:      src
   -- .hs or .lhs file containing the Main module.
-  -- main-is:             
+  main-is:             Main.hs
   
   -- Modules included in this executable, other than Main.
   -- other-modules:       
   
   -- Other library packages from which modules are imported.
-  build-depends:       base ==4.6.*
+  build-depends:       base ==4.6.*,
+                       bytestring,
+                       vector,
+                       cassava
   
